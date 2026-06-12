@@ -21,8 +21,7 @@ export default function NavBar() {
       <div className="navbar-links">
         <a href="#how-it-works" className="navbar-link">How it works</a>
         <a href="#obama-log" className="navbar-link">The Log</a>
-        <a href="#about" className="navbar-link">About</a>
-        <a href="#install" className="navbar-cta">Install Free</a>
+        <a href="#install" className="navbar-cta">Join Waitlist</a>
       </div>
     </nav>
   );

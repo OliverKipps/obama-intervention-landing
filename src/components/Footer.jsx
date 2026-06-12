@@ -43,13 +43,11 @@ export default function Footer() {
             <span className="footer-col-title">Product</span>
             <a href="#how-it-works">How it works</a>
             <a href="#obama-log">The Obama Log</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#install">Join Waitlist</a>
           </div>
           <div className="footer-col">
-            <span className="footer-col-title">Legal</span>
-            <a href="#disclaimer">Parody disclaimer</a>
-            <a href="#privacy">Privacy</a>
-            <a href="#github">GitHub</a>
+            <span className="footer-col-title">Connect</span>
+            <a href="https://github.com/OliverKipps/obama-intervention-landing" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
