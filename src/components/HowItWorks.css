@@ -1,0 +1,158 @@
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-block: var(--section-padding);
+  padding-inline: var(--page-padding);
+  background-color: var(--bg-section);
+  position: relative;
+  width: 100%;
+}
+
+.how-accent-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background-color: var(--red);
+}
+
+.how-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.how-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.how-title {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 48px;
+  color: var(--red);
+  margin: 0;
+}
+
+.how-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+}
+
+.how-cards-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+}
+
+.how-eagle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+}
+
+.how-eagle-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.how-eagle-img-mirror {
+  transform: scaleX(-1);
+}
+
+.how-cards {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+  min-width: 0;
+}
+
+.how-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--white);
+  border-radius: 12px;
+  border-top: 100px solid;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.how-card-step {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.how-card-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.how-card-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .how-cards-row {
+    flex-direction: column;
+  }
+
+  .how-eagle {
+    display: none;
+  }
+
+  .how-cards {
+    flex-direction: column;
+  }
+
+  .how-title {
+    font-size: 32px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .how-card {
+    border-top-width: 60px;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-title {
+    font-size: 26px;
+  }
+}

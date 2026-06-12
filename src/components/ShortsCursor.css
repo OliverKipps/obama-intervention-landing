@@ -1,0 +1,119 @@
+.shorts-cursor-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: clip;
+}
+
+/* ---- Flash ---- */
+.shorts-flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0.18;
+  animation: shorts-flash-fade 0.35s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes shorts-flash-fade {
+  0%   { opacity: 0.18; }
+  100% { opacity: 0; }
+}
+
+/* ---- Thumbnail ---- */
+.shorts-thumb {
+  position: absolute;
+  width: 80px;
+  height: 140px;
+  border-radius: 10px;
+  overflow: clip;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: shorts-thumb-in 0.3s ease-out forwards;
+  transform-origin: center center;
+}
+
+.shorts-thumb-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.shorts-thumb-placeholder {
+  width: 40px;
+  height: 54px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.shorts-thumb-placeholder::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 18px solid rgba(255, 255, 255, 0.6);
+  margin-left: 4px;
+}
+
+.shorts-label {
+  position: absolute;
+  bottom: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: lowercase;
+}
+
+@keyframes shorts-thumb-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ---- Red eye lasers (thicker, longer visibility) ---- */
+.shorts-lasers-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.shorts-laser-line {
+  fill: none;
+  stroke: #FF1744;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.shorts-laser-glow {
+  stroke: rgba(255, 23, 68, 0.25);
+  stroke-width: 18;
+  filter: blur(6px);
+}
+
+/* ---- Falling pixels ---- */
+.shorts-falling-pixel {
+  position: absolute;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 11;
+  will-change: transform;
+}

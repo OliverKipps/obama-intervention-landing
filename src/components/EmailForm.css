@@ -1,0 +1,130 @@
+.email-form-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ---- Label ---- */
+.email-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+}
+
+/* ---- Input row ---- */
+.email-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 20px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.email-input:focus {
+  border-color: var(--red);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.email-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.email-submit {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.email-submit:hover:not(:disabled) {
+  background: var(--red-dark);
+}
+
+.email-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Error ---- */
+.email-error {
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFCDD2;
+}
+
+/* ---- Success ---- */
+.email-success {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.email-success-text {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--white);
+  margin: 0 0 12px 0;
+}
+
+.email-reset-btn {
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.email-reset-btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .email-row {
+    flex-direction: column;
+  }
+
+  .email-submit {
+    width: 100%;
+  }
+}
